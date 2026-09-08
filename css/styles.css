@@ -435,7 +435,10 @@ p { margin: 0 0 1em; color: var(--text); }
   overflow: hidden;
   border: 1px solid var(--line);
   transition: transform .25s ease, box-shadow .25s ease;
+  position: relative;
 }
+.project-card:has(.card-link) { cursor: pointer; }
+.project-card .card-link::after { content: ""; position: absolute; inset: 0; }
 .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 .project-thumb {
   aspect-ratio: 4/3;
