@@ -675,12 +675,25 @@ p { margin: 0 0 1em; color: var(--text); }
 .value-row:last-child { border-bottom: none; }
 .value-num { font-family: var(--font-head); font-size: 1.6rem; color: var(--gold); width: 50px; flex-shrink: 0; }
 
-.leader-card { text-align: left; }
-.leader-card h3 { margin-bottom: 2px; }
-.leader-role { color: var(--terracotta-dark); font-weight: 600; font-size: 0.88rem; margin-bottom: 14px; display:block; }
-.leader-card p { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; }
-.leader-card p:last-child { margin-bottom: 0; }
+.leader-list { display: flex; flex-direction: column; gap: 24px; }
+.leader-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+.leader-name h3 { margin-bottom: 2px; }
+.leader-role { color: var(--terracotta-dark); font-weight: 600; font-size: 0.88rem; display: block; }
+.leader-details p { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; }
+.leader-details p:last-child { margin-bottom: 0; }
 .leader-lede { font-family: var(--font-head); font-size: 1.05rem; color: var(--ink); margin-bottom: 14px; }
+@media (max-width: 720px) {
+  .leader-card { grid-template-columns: 1fr; gap: 16px; }
+}
 
 /* ==========================================================================
    FAQ
