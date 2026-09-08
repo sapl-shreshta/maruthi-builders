@@ -675,19 +675,12 @@ p { margin: 0 0 1em; color: var(--text); }
 .value-row:last-child { border-bottom: none; }
 .value-num { font-family: var(--font-head); font-size: 1.6rem; color: var(--gold); width: 50px; flex-shrink: 0; }
 
-.leader-card { text-align: center; }
-.leader-photo {
-  width: 100%; aspect-ratio: 1;
-  border-radius: var(--radius-md);
-  background: linear-gradient(160deg, var(--sand-deep), #d9c9a3);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 18px;
-  overflow: hidden;
-}
-.leader-photo svg { width: 60%; height: 60%; opacity: 0.7; }
+.leader-card { text-align: left; }
 .leader-card h3 { margin-bottom: 2px; }
-.leader-role { color: var(--terracotta-dark); font-weight: 600; font-size: 0.88rem; margin-bottom: 10px; display:block; }
-.leader-card p { color: var(--muted); font-size: 0.88rem; }
+.leader-role { color: var(--terracotta-dark); font-weight: 600; font-size: 0.88rem; margin-bottom: 14px; display:block; }
+.leader-card p { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; }
+.leader-card p:last-child { margin-bottom: 0; }
+.leader-lede { font-family: var(--font-head); font-size: 1.05rem; color: var(--ink); margin-bottom: 14px; }
 
 /* ==========================================================================
    FAQ
