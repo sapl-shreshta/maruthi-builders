@@ -48,6 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* Leadership flip cards */
+  document.querySelectorAll(".leader-card").forEach((card) => {
+    const toggle = () => {
+      const flipped = card.classList.toggle("is-flipped");
+      card.setAttribute("aria-pressed", flipped ? "true" : "false");
+    };
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+
   /* FAQ accordion */
   document.querySelectorAll(".faq-item").forEach((item) => {
     const q = item.querySelector(".faq-q");
